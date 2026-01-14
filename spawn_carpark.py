@@ -7,9 +7,15 @@
 CARLA Carpark Vehicle Spawner
 
 This script spawns vehicles along parking middle lines defined in a 2D array.
+By default, uses static.prop.mesh for better performance (no vehicle component overhead).
 Vehicles spawn at height with physics enabled and will naturally fall and settle
 on terrain. The script exits after spawning - CARLA's physics simulation handles
 the rest automatically.
+
+Performance:
+- Uses static.prop.mesh with mass attribute (better performance, same as manual drag-drop)
+- Falls back to vehicle blueprints if mesh paths not found
+- Physics automatically enabled when mass > 0
 
 Input Array Format:
 Each row: [start_location, end_location, side_type, num_vehicles, min_spacing, exclude_vehicles]
@@ -21,18 +27,22 @@ Each row: [start_location, end_location, side_type, num_vehicles, min_spacing, e
 - exclude_vehicles: list (OPTIONAL) - list of vehicle keywords to exclude (e.g., ['truck', 'van'])
 
 Vehicles are selected randomly from the available pool after filtering.
+
+Note: To use static props, you may need to add vehicle mesh path mappings in get_vehicle_mesh_path().
 """
 
 import carla
 import math
 import random
 import argparse
+import json
+import os
 
 
 class CarparkVehicleSpawner:
-    """Manages spawning of parked vehicles in a carpark layout."""
+    """Manages spawning of parked vehicles in a carpark layout using static props for performance."""
     
-    def __init__(self, world, spawn_height=50.0, parking_offset=2.5):
+    def __init__(self, world, spawn_height=50.0, parking_offset=2.5, use_static_props=True, prop_mass=100.0):
         """
         Initialize the carpark vehicle spawner.
         
@@ -40,11 +50,28 @@ class CarparkVehicleSpawner:
             world: CARLA world object
             spawn_height: Height above terrain to spawn vehicles (meters)
             parking_offset: Perpendicular offset from middle line to parking spot (meters)
+            use_static_props: If True, use static.prop.mesh (better performance). If False, use vehicle blueprints.
+            prop_mass: Mass for static props when physics enabled (kg)
         """
         self.world = world
         self.spawn_height = spawn_height
         self.parking_offset = parking_offset
+        self.use_static_props = use_static_props
+        self.prop_mass = prop_mass
         self.vehicles = []
+        self.static_prop_bp = None
+        
+        # Initialize static prop blueprint if using static props
+        if self.use_static_props:
+            blueprint_library = self.world.get_blueprint_library()
+            try:
+                self.static_prop_bp = blueprint_library.find('static.prop.mesh')
+                if self.static_prop_bp is None:
+                    print("Warning: static.prop.mesh not found. Falling back to vehicle blueprints.")
+                    self.use_static_props = False
+            except:
+                print("Warning: Could not find static.prop.mesh. Falling back to vehicle blueprints.")
+                self.use_static_props = False
         
     def get_ground_height(self, location):
         """
@@ -238,6 +265,104 @@ class CarparkVehicleSpawner:
         
         return spawn_transforms
     
+    def get_vehicle_mesh_path(self, vehicle_bp_id):
+        """
+        Get static mesh path for a vehicle blueprint ID.
+        
+        This function attempts to construct mesh paths based on vehicle ID patterns.
+        You can extend this mapping with actual mesh paths from CARLA content browser.
+        
+        To find mesh paths:
+        1. Open CARLA in Unreal Editor
+        2. Content Browser -> Search for vehicle meshes
+        3. Right-click mesh -> Copy Reference
+        4. Add mapping below
+        
+        Args:
+            vehicle_bp_id: Vehicle blueprint ID (e.g., 'vehicle.audi.a2')
+            
+        Returns:
+            str or None: Mesh path if found, None otherwise (falls back to vehicle blueprint)
+        """
+        # Vehicle blueprint ID -> static mesh path mapping
+        # Based on available parked vehicle meshes in /Game/Carla/Static/Car/4Wheeled/
+        # Priority: ParkedVehicles folder > Individual vehicle folders with parked meshes > Regular meshes
+        VEHICLE_MESH_MAPPING = {
+            # ===== ParkedVehicles folder (dedicated parked meshes) =====
+            'vehicle.dodge.charger': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked',
+            'vehicle.dodge.charger_2020': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked',
+            'vehicle.dodge.charger_police': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked',
+            'vehicle.dodge.charger_police_2020': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked',
+            'vehicle.ford.crown': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/FordCrown/SM_FordCrown_parked.SM_FordCrown_parked',
+            'vehicle.lincoln.mkz_2017': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Lincoln/SM_LincolnParked.SM_LincolnParked',
+            'vehicle.lincoln.mkz_2020': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Lincoln/SM_LincolnParked.SM_LincolnParked',
+            'vehicle.mercedes.coupe': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/MercedesCCC/SM_MercedesCCC_Parked.SM_MercedesCCC_Parked',
+            'vehicle.mercedes.coupe_2020': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/MercedesCCC/SM_MercedesCCC_Parked.SM_MercedesCCC_Parked',
+            'vehicle.mini.cooper_s': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Mini2021/SM_Mini2021_parked.SM_Mini2021_parked',
+            'vehicle.mini.cooper_s_2021': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Mini2021/SM_Mini2021_parked.SM_Mini2021_parked',
+            'vehicle.mini.cooperst': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Mini2021/SM_Mini2021_parked.SM_Mini2021_parked',  # Alternative naming
+            'vehicle.mini.cooperst_2021': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Mini2021/SM_Mini2021_parked.SM_Mini2021_parked',  # Alternative naming
+            'vehicle.nissan.patrol': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/NissanPatrol2021/SM_NissanPatrol2021_parked.SM_NissanPatrol2021_parked',
+            'vehicle.nissan.patrol_2021': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/NissanPatrol2021/SM_NissanPatrol2021_parked.SM_NissanPatrol2021_parked',
+            'vehicle.tesla.model3': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/TeslaM3/SM_TeslaM3_parked.SM_TeslaM3_parked',
+            'vehicle.tesla.model3_2021': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/TeslaM3/SM_TeslaM3_parked.SM_TeslaM3_parked',
+            'vehicle.volkswagen.t2': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/VolkswagenT2/SM_VolkswagenT2_2021_Parked.SM_VolkswagenT2_2021_Parked',
+            'vehicle.volkswagen.t2_2021': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/VolkswagenT2/SM_VolkswagenT2_2021_Parked.SM_VolkswagenT2_2021_Parked',
+            
+            # ===== Individual vehicle folders with parked meshes =====
+            'vehicle.audi.etron': '/Game/Carla/Static/Car/4Wheeled/AudiETron/SM_EtronParked.SM_EtronParked',
+            'vehicle.audi.tt': '/Game/Carla/Static/Car/4Wheeled/AudiTT/SM_AudiTT.SM_AudiTT',
+            'vehicle.audi.a2': '/Game/Carla/Static/Car/4Wheeled/AudiA2/SM_AudiA2.SM_AudiA2',
+            'vehicle.bmw.grandtourer': '/Game/Carla/Static/Car/4Wheeled/BmwGranTourer/SM_BMWGrandTourer.SM_BMWGrandTourer',
+            'vehicle.bmw.isetta': '/Game/Carla/Static/Car/4Wheeled/BmwIsetta/SM_BMWIsetta.SM_BMWIsetta',
+            'vehicle.chevrolet.impala': '/Game/Carla/Static/Car/4Wheeled/Chevrolet/SM_ChevroletImpala.SM_ChevroletImpala',
+            'vehicle.citroen.c3': '/Game/Carla/Static/Car/4Wheeled/Citroen/SM_Citroen_C3.SM_Citroen_C3',
+            'vehicle.tesla.cybertruck': '/Game/Carla/Static/Car/4Wheeled/Cybertruck/SM_Cybertruck.SM_Cybertruck',
+            'vehicle.cybertruck': '/Game/Carla/Static/Car/4Wheeled/Cybertruck/SM_Cybertruck.SM_Cybertruck',  # Alternative naming
+            'vehicle.dodge.charger_2020': '/Game/Carla/Static/Car/4Wheeled/DodgeCharger2020/SM_Charger_parked.SM_Charger_parked',
+            'vehicle.dodge.charger_police_2020': '/Game/Carla/Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/SM_ChargerCopParked.SM_ChargerCopParked',
+            'vehicle.ford.mustang': '/Game/Carla/Static/Car/4Wheeled/Mustang/SM_Mustang_prop.SM_Mustang_prop',
+            'vehicle.jeep.wrangler_rubicon': '/Game/Carla/Static/Car/4Wheeled/Jeep/SM_JeepWranglerRubicon.SM_JeepWranglerRubicon',
+            'vehicle.seat.leon': '/Game/Carla/Static/Car/4Wheeled/Leon/SM_SeatLeon.SM_SeatLeon',
+            'vehicle.lincoln.mkz_2020': '/Game/Carla/Static/Car/4Wheeled/LincolnMKZ2020/SM_Lincoln2020Parked.SM_Lincoln2020Parked',
+            'vehicle.mercedes.coupe': '/Game/Carla/Static/Car/4Wheeled/MercedesCCC/SM_mercedescccParked.SM_mercedescccParked',
+            'vehicle.mini.cooper_s': '/Game/Carla/Static/Car/4Wheeled/Mini2021/SM_Mini2021Parked.SM_Mini2021Parked',
+            'vehicle.mini.cooper_s_2021': '/Game/Carla/Static/Car/4Wheeled/Mini2021/SM_Mini2021Parked.SM_Mini2021Parked',
+            'vehicle.mini.cooperst_2021': '/Game/Carla/Static/Car/4Wheeled/Mini2021/SM_Mini2021Parked.SM_Mini2021Parked',  # Alternative naming
+            'vehicle.nissan.micra': '/Game/Carla/Static/Car/4Wheeled/Nissan_Micra/SM_NissanMicra.SM_NissanMicra',
+            'vehicle.nissan.patrol_2021': '/Game/Carla/Static/Car/4Wheeled/NissanPatrol2021/SM_Patrol2021Parked.SM_Patrol2021Parked',
+            'vehicle.tesla.model3': '/Game/Carla/Static/Car/4Wheeled/Tesla/SM_TeslaM3_v2.SM_TeslaM3_v2',
+            'vehicle.toyota.prius': '/Game/Carla/Static/Car/4Wheeled/Toyota_Prius/SMC_ToyotaPrius.SMC_ToyotaPrius',
+            'vehicle.volkswagen.beetle': '/Game/Carla/Static/Car/4Wheeled/Beetle/SM_VolkswagenBeetle.SM_VolkswagenBeetle',
+            'vehicle.volkswagen.t2': '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/VolkswagenT2/SM_VolkswagenT2_2021_Parked.SM_VolkswagenT2_2021_Parked',
+            'vehicle.tazzari.zero': '/Game/Carla/Static/Car/4Wheeled/Tazzari/SM_Tazzari.SM_Tazzari',
+            'vehicle.roameo': '/Game/Carla/Static/Car/4Wheeled/ROAMEO/ROAMEO.ROAMEO',
+            
+            # Note: Vehicles without static meshes will fall back to vehicle blueprints:
+            # - vehicle.carlamotors.carlacola
+            # - vehicle.micro.microlino
+            # - vehicle.mercedes.sprinter
+            # - vehicle.ford.ambulance
+            # These will use vehicle blueprints with physics enabled
+        }
+        
+        if vehicle_bp_id in VEHICLE_MESH_MAPPING:
+            return VEHICLE_MESH_MAPPING[vehicle_bp_id]
+        
+        # Try to construct path from vehicle ID (may not work for all vehicles)
+        # Pattern: vehicle.make.model -> /Game/Carla/Static/Car/4Wheeled/ParkedVehicles/MakeModel/SM_MakeModelParked.SM_MakeModelParked
+        parts = vehicle_bp_id.split('.')
+        if len(parts) >= 3:
+            make = parts[1].capitalize()
+            model = parts[2].capitalize()
+            
+            # Try common patterns (unlikely to work without actual paths)
+            # This is just a placeholder - you should add actual mappings above
+            pass
+        
+        # Return None if no path found - will fall back to vehicle blueprint
+        return None
+    
     def filter_vehicles_for_line(self, vehicle_blueprints, exclude_keywords=None):
         """
         Filter vehicles for a specific parking line based on exclude keywords.
@@ -262,7 +387,104 @@ class CarparkVehicleSpawner:
         
         return filtered
     
-    def spawn_vehicles_along_line(self, parking_line_data, vehicle_blueprints):
+    def save_spawn_data(self, spawn_data, filename):
+        """
+        Save spawn data to a JSON file.
+        
+        Args:
+            spawn_data: List of dicts with spawn information
+            filename: Output filename
+        """
+        try:
+            with open(filename, 'w') as f:
+                json.dump(spawn_data, f, indent=2)
+            print(f"\nSpawn data saved to: {filename}")
+        except Exception as e:
+            print(f"Error saving spawn data: {e}")
+    
+    def load_spawn_data(self, filename):
+        """
+        Load spawn data from a JSON file.
+        
+        Args:
+            filename: Input filename
+            
+        Returns:
+            list: List of dicts with spawn information, or None if error
+        """
+        try:
+            with open(filename, 'r') as f:
+                spawn_data = json.load(f)
+            print(f"Loaded spawn data from: {filename}")
+            print(f"  Found {len(spawn_data)} vehicle spawns")
+            return spawn_data
+        except FileNotFoundError:
+            print(f"Error: File not found: {filename}")
+            return None
+        except Exception as e:
+            print(f"Error loading spawn data: {e}")
+            return None
+    
+    def spawn_parked_vehicle(self, vehicle_bp, transform, vehicle_bp_id=None):
+        """
+        Spawn a parked vehicle as either a static prop (better performance) or vehicle blueprint.
+        
+        Args:
+            vehicle_bp: Vehicle blueprint (used for fallback or when use_static_props=False)
+            transform: Spawn transform
+            vehicle_bp_id: Vehicle blueprint ID (for mesh path lookup)
+            
+        Returns:
+            carla.Actor: Spawned actor (static prop or vehicle), or None if failed
+        """
+        if vehicle_bp_id is None:
+            vehicle_bp_id = vehicle_bp.id
+        
+        # Try to use static prop if enabled
+        if self.use_static_props and self.static_prop_bp is not None:
+            mesh_path = self.get_vehicle_mesh_path(vehicle_bp_id)
+            
+            if mesh_path:
+                try:
+                    # Set attributes on the blueprint (CARLA creates a new actor description on spawn)
+                    # Note: We set attributes before each spawn to ensure correct mesh_path
+                    prop_bp = self.static_prop_bp
+                    prop_bp.set_attribute('mesh_path', mesh_path)
+                    prop_bp.set_attribute('mass', str(self.prop_mass))  # Enable physics with mass
+                    
+                    # Spawn static prop (physics automatically enabled when mass > 0)
+                    prop = self.world.spawn_actor(prop_bp, transform)
+                    
+                    print(f"Spawned static prop: {mesh_path} (mass={self.prop_mass}kg) at "
+                          f"({transform.location.x:.2f}, {transform.location.y:.2f}, {transform.location.z:.2f})")
+                    return prop
+                except Exception as e:
+                    print(f"Warning: Failed to spawn static prop for {vehicle_bp_id}: {e}")
+                    print(f"  Falling back to vehicle blueprint...")
+                    # Fall through to vehicle blueprint spawn
+        
+        # Fallback: Use vehicle blueprint (original method)
+        try:
+            vehicle = self.world.spawn_actor(vehicle_bp, transform)
+            vehicle.set_simulate_physics(True)
+            vehicle.set_enable_gravity(True)
+            vehicle.set_target_velocity(carla.Vector3D(0, 0, 0))
+            
+            control = carla.VehicleControl()
+            control.brake = 0.5
+            control.hand_brake = False
+            control.throttle = 0.0
+            control.steer = 0.0
+            vehicle.apply_control(control)
+            
+            print(f"Spawned vehicle blueprint: {vehicle_bp.id} at "
+                  f"({transform.location.x:.2f}, {transform.location.y:.2f}, {transform.location.z:.2f})")
+            return vehicle
+        except Exception as e:
+            print(f"Failed to spawn vehicle: {e}")
+            return None
+    
+    def spawn_vehicles_along_line(self, parking_line_data, vehicle_blueprints, loaded_spawns=None, parking_line_index=None):
         """
         Spawn vehicles along a single parking middle line.
         
@@ -270,9 +492,11 @@ class CarparkVehicleSpawner:
             parking_line_data: [start_loc, end_loc, side_type, num_vehicles, min_spacing, exclude_vehicles]
                 exclude_vehicles is optional and can be a list of vehicle keywords to exclude
             vehicle_blueprints: List of vehicle blueprints to choose from
+            loaded_spawns: Optional list of pre-loaded spawn data (from file) for THIS parking line only
+            parking_line_index: Index of this parking line (for tracking in save data)
             
         Returns:
-            list: List of spawned vehicle actors
+            tuple: (list of spawned vehicle actors, list of spawn data dicts)
         """
         # Parse parking line data (support optional exclude_vehicles)
         if len(parking_line_data) >= 6:
@@ -286,47 +510,87 @@ class CarparkVehicleSpawner:
         
         if not line_vehicle_blueprints:
             print(f"Warning: No vehicles available after filtering. Skipping this parking line.")
-            return []
-        
-        # Generate spawn positions
-        spawn_transforms = self.generate_spawn_positions(
-            start_loc, end_loc, side_type, num_vehicles, min_spacing
-        )
+            return [], []
         
         spawned_vehicles = []
+        spawn_data_list = []
         
-        for transform, side in spawn_transforms:
-            # Randomly select a vehicle blueprint from filtered list
-            vehicle_bp = random.choice(line_vehicle_blueprints)
+        # If loaded spawns provided, use them; otherwise generate new positions
+        if loaded_spawns:
+            # Use loaded spawn data
+            for spawn_info in loaded_spawns:
+                try:
+                    # Create transform from loaded data
+                    location = carla.Location(
+                        x=spawn_info['location']['x'],
+                        y=spawn_info['location']['y'],
+                        z=spawn_info['location']['z']
+                    )
+                    rotation = carla.Rotation(
+                        yaw=spawn_info['rotation']['yaw'],
+                        pitch=spawn_info['rotation']['pitch'],
+                        roll=spawn_info['rotation']['roll']
+                    )
+                    transform = carla.Transform(location, rotation)
+                    
+                    # Find vehicle blueprint by ID
+                    vehicle_bp_id = spawn_info.get('vehicle_type', spawn_info.get('mesh_path', ''))
+                    vehicle_bp = None
+                    for bp in line_vehicle_blueprints:
+                        if bp.id == vehicle_bp_id:
+                            vehicle_bp = bp
+                            break
+                    
+                    if vehicle_bp is None:
+                        print(f"Warning: Vehicle type '{vehicle_bp_id}' not found, skipping...")
+                        continue
+                    
+                    # Spawn using helper method (handles static prop vs vehicle)
+                    actor = self.spawn_parked_vehicle(vehicle_bp, transform, vehicle_bp_id)
+                    
+                    if actor is not None:
+                        spawned_vehicles.append(actor)
+                        spawn_data_list.append(spawn_info)  # Keep same data
+                    
+                except Exception as e:
+                    print(f"Failed to spawn vehicle from loaded data: {e}")
+        else:
+            # Generate spawn positions (original behavior)
+            spawn_transforms = self.generate_spawn_positions(
+                start_loc, end_loc, side_type, num_vehicles, min_spacing
+            )
             
-            try:
-                # Spawn vehicle
-                vehicle = self.world.spawn_actor(vehicle_bp, transform)
+            for transform, side in spawn_transforms:
+                # Randomly select a vehicle blueprint from filtered list
+                vehicle_bp = random.choice(line_vehicle_blueprints)
                 
-                # Ensure physics and gravity are enabled
-                vehicle.set_simulate_physics(True)
-                vehicle.set_enable_gravity(True)
+                # Spawn using helper method (handles static prop vs vehicle)
+                actor = self.spawn_parked_vehicle(vehicle_bp, transform)
                 
-                # Set initial velocity to zero (will fall due to gravity)
-                vehicle.set_target_velocity(carla.Vector3D(0, 0, 0))
-                
-                # Apply brakes and handbrake to prevent sliding after landing
-                control = carla.VehicleControl()
-                control.brake = 0.5  # Full brake
-                control.hand_brake = False  # Handbrake engaged
-                control.throttle = 0.0
-                control.steer = 0.0
-                vehicle.apply_control(control)
-                
-                spawned_vehicles.append(vehicle)
-                print(f"Spawned {vehicle_bp.id} at ({transform.location.x:.2f}, "
-                      f"{transform.location.y:.2f}, {transform.location.z:.2f}) on {side} side "
-                      f"(yaw: {transform.rotation.yaw:.1f}°)")
-                
-            except Exception as e:
-                print(f"Failed to spawn vehicle: {e}")
+                if actor is not None:
+                    spawned_vehicles.append(actor)
+                    
+                    # Save spawn data (with parking_line_index for tracking)
+                    spawn_data = {
+                        'location': {
+                            'x': transform.location.x,
+                            'y': transform.location.y,
+                            'z': transform.location.z
+                        },
+                        'rotation': {
+                            'yaw': transform.rotation.yaw,
+                            'pitch': transform.rotation.pitch,
+                            'roll': transform.rotation.roll
+                        },
+                        'vehicle_type': vehicle_bp.id,
+                        'side': side,
+                        'parking_line_index': parking_line_index
+                    }
+                    spawn_data_list.append(spawn_data)
+                    
+                    print(f"  on {side} side (yaw: {transform.rotation.yaw:.1f}°)")
         
-        return spawned_vehicles
+        return spawned_vehicles, spawn_data_list
     
     def filter_vehicles(self, vehicle_blueprints):
         """
@@ -358,16 +622,17 @@ class CarparkVehicleSpawner:
         
         return filtered
     
-    def spawn_carpark(self, parking_lines, vehicle_filter='vehicle.*'):
+    def spawn_carpark(self, parking_lines, vehicle_filter='vehicle.*', load_file=None):
         """
         Spawn vehicles for all parking lines defined in the input array.
         
         Args:
             parking_lines: List of parking line data arrays
             vehicle_filter: Blueprint filter string for vehicles
+            load_file: Optional filename to load spawn data from
             
         Returns:
-            list: All spawned vehicle actors
+            tuple: (list of all spawned vehicle actors, list of all spawn data)
         """
         # Get vehicle blueprints
         blueprint_library = self.world.get_blueprint_library()
@@ -383,7 +648,36 @@ class CarparkVehicleSpawner:
             raise ValueError("No 4-wheeled vehicles found after filtering out bikes/2-wheeled vehicles")
         
         print(f"Found {len(vehicle_blueprints)} vehicle blueprints (4-wheeled vehicles only)")
+        
+        # Load spawn data from file if provided and organize by parking line index
+        loaded_spawns_by_line = None
+        if load_file:
+            all_loaded_spawns = self.load_spawn_data(load_file)
+            if all_loaded_spawns is None:
+                print("Failed to load spawn data. Falling back to random generation.")
+                loaded_spawns_by_line = None
+            else:
+                # Group spawns by parking_line_index
+                loaded_spawns_by_line = {}
+                for spawn in all_loaded_spawns:
+                    line_idx = spawn.get('parking_line_index', None)
+                    if line_idx is not None:
+                        if line_idx not in loaded_spawns_by_line:
+                            loaded_spawns_by_line[line_idx] = []
+                        loaded_spawns_by_line[line_idx].append(spawn)
+                    else:
+                        # Legacy format: spawns without parking_line_index
+                        # Assign them sequentially (not ideal but handles old files)
+                        print("Warning: Found spawns without parking_line_index. Assigning sequentially.")
+                        # We'll handle this case by using spawns in order
+                        if 'unassigned' not in loaded_spawns_by_line:
+                            loaded_spawns_by_line['unassigned'] = []
+                        loaded_spawns_by_line['unassigned'].append(spawn)
+        
         print(f"Processing {len(parking_lines)} parking lines...\n")
+        
+        all_spawn_data = []
+        unassigned_spawn_index = 0
         
         # Spawn vehicles for each parking line
         for i, parking_line in enumerate(parking_lines):
@@ -394,13 +688,32 @@ class CarparkVehicleSpawner:
                 exclude_list = parking_line[5]
                 print(f"  Excluding vehicles: {exclude_list}")
             
-            vehicles = self.spawn_vehicles_along_line(parking_line, vehicle_blueprints)
+            # Get spawns for this specific parking line
+            line_loaded_spawns = None
+            if loaded_spawns_by_line:
+                # Try to get spawns for this line index
+                if i in loaded_spawns_by_line:
+                    line_loaded_spawns = loaded_spawns_by_line[i]
+                    print(f"  Using {len(line_loaded_spawns)} pre-saved spawns for this line")
+                elif 'unassigned' in loaded_spawns_by_line and loaded_spawns_by_line['unassigned']:
+                    # Legacy format: use unassigned spawns sequentially
+                    # This is a fallback for old file formats
+                    remaining_unassigned = loaded_spawns_by_line['unassigned'][unassigned_spawn_index:]
+                    if remaining_unassigned:
+                        line_loaded_spawns = remaining_unassigned
+                        unassigned_spawn_index += len(remaining_unassigned)
+                        print(f"  Using {len(line_loaded_spawns)} unassigned spawns for this line")
+            
+            vehicles, spawn_data = self.spawn_vehicles_along_line(
+                parking_line, vehicle_blueprints, line_loaded_spawns, parking_line_index=i
+            )
             self.vehicles.extend(vehicles)
+            all_spawn_data.extend(spawn_data)
             print(f"  Spawned {len(vehicles)} vehicles\n")
         
         print(f"Total vehicles spawned: {len(self.vehicles)}\n")
         
-        return self.vehicles
+        return self.vehicles, all_spawn_data
     
     def cleanup(self):
         """Destroy all spawned vehicles."""
@@ -430,6 +743,16 @@ def main():
         default=2000,
         type=int,
         help='TCP port of CARLA Simulator (default: 2000)')
+    argparser.add_argument(
+        '-f', '--file',
+        metavar='F',
+        default=None,
+        help='Load spawn data from JSON file. If not provided, spawns randomly and saves to carpark_spawns.json')
+    argparser.add_argument(
+        '-s', '--save',
+        metavar='S',
+        default='carpark_spawns.json',
+        help='Filename to save spawn data (default: carpark_spawns.json)')
     args = argparser.parse_args()
     
     # Connect to CARLA
@@ -491,7 +814,7 @@ def main():
             [
                 carla.Location(x=382.2, y=-165.4, z=0),  # Start
                 carla.Location(x=290.9, y=-165.4, z=0),  # End
-                "both",      # Side type
+                "both",      # Side type parking_lines
                 30,          # Number of vehicles
                 4.0          # Minimum spacing (meters)
             ],
@@ -650,17 +973,34 @@ def main():
         # ====================================================================
         
         # Create spawner
+        # By default, uses static.prop.mesh for better performance (no vehicle component overhead)
+        # Falls back to vehicle blueprints if mesh paths not found
         spawner = CarparkVehicleSpawner(
             world=world,
-            spawn_height=1.5,        # Spawn 50m above ground
-            parking_offset=3.0         # 2.5m offset from middle line
+            spawn_height=1.5,        # Spawn 1.5m above ground
+            parking_offset=3.0,     # 3.0m offset from middle line
+            use_static_props=True,   # Use static props (better performance)
+            prop_mass=100.0          # Mass for static props (enables physics)
         )
         
+        if spawner.use_static_props:
+            print("Using static.prop.mesh for parked vehicles (better performance)")
+            print("  - Physics enabled via mass attribute")
+            print("  - Falls back to vehicle blueprints if mesh paths not found")
+        else:
+            print("Using vehicle blueprints (fallback mode)")
+        
         # Spawn all vehicles
-        vehicles = spawner.spawn_carpark(
+        vehicles, spawn_data = spawner.spawn_carpark(
             parking_lines=parking_lines,
-            vehicle_filter='vehicle.*'  # Use all vehicle types
+            vehicle_filter='vehicle.*',  # Use all vehicle types
+            load_file=args.file  # Load from file if provided
         )
+        
+        # Save spawn data if not loading from file
+        if not args.file:
+            spawner.save_spawn_data(spawn_data, args.save)
+            print(f"Spawn data saved to: {args.save}")
         
         print(f"\nSuccessfully spawned {len(vehicles)} vehicles with physics enabled.")
         print("Vehicles will fall and settle naturally in CARLA's physics simulation.")
