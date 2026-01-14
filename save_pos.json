@@ -1,0 +1,2852 @@
+[
+  {
+    "location": {
+      "x": 302.0,
+      "y": -229.10000610351562,
+      "z": 1.540624976158142
+    },
+    "rotation": {
+      "yaw": 91.9537582397461,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 309.3292541503906,
+      "y": -229.10000610351562,
+      "z": 1.4699218273162842
+    },
+    "rotation": {
+      "yaw": 89.18547058105469,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police_2020",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 314.7536315917969,
+      "y": -229.10000610351562,
+      "z": 1.4285937547683716
+    },
+    "rotation": {
+      "yaw": 89.3154525756836,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 321.8206787109375,
+      "y": -229.10000610351562,
+      "z": 1.3839062452316284
+    },
+    "rotation": {
+      "yaw": 89.80391693115234,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 328.3515319824219,
+      "y": -229.10000610351562,
+      "z": 1.354062557220459
+    },
+    "rotation": {
+      "yaw": 88.46408081054688,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 336.23236083984375,
+      "y": -229.10000610351562,
+      "z": 1.3303906917572021
+    },
+    "rotation": {
+      "yaw": 91.49822235107422,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_2020",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 343.1176452636719,
+      "y": -229.10000610351562,
+      "z": 1.317968726158142
+    },
+    "rotation": {
+      "yaw": 89.24697875976562,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 353.0199890136719,
+      "y": -229.10000610351562,
+      "z": 1.3068749904632568
+    },
+    "rotation": {
+      "yaw": 91.50015258789062,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 362.67340087890625,
+      "y": -229.10000610351562,
+      "z": 1.2959375381469727
+    },
+    "rotation": {
+      "yaw": 91.50724792480469,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 368.10931396484375,
+      "y": -229.10000610351562,
+      "z": 1.2859375476837158
+    },
+    "rotation": {
+      "yaw": 89.26332092285156,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_2020",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 373.23309326171875,
+      "y": -229.10000610351562,
+      "z": 1.273593783378601
+    },
+    "rotation": {
+      "yaw": 89.47682189941406,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "left",
+    "parking_line_index": 0
+  },
+  {
+    "location": {
+      "x": 302.0,
+      "y": -218.60000610351562,
+      "z": 1.2685155868530273
+    },
+    "rotation": {
+      "yaw": -91.51335906982422,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.jeep.wrangler_rubicon",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 310.8949890136719,
+      "y": -218.60000610351562,
+      "z": 1.085546851158142
+    },
+    "rotation": {
+      "yaw": -91.41412353515625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 324.0618591308594,
+      "y": -218.60000610351562,
+      "z": 0.8453906178474426
+    },
+    "rotation": {
+      "yaw": -91.83162689208984,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 334.5068054199219,
+      "y": -218.60000610351562,
+      "z": 0.72265625
+    },
+    "rotation": {
+      "yaw": -91.8817138671875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 345.5552978515625,
+      "y": -218.60000610351562,
+      "z": 0.6656250357627869
+    },
+    "rotation": {
+      "yaw": -88.83077239990234,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 356.88787841796875,
+      "y": -218.60000610351562,
+      "z": 0.6807031631469727
+    },
+    "rotation": {
+      "yaw": -90.90486145019531,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 367.1311340332031,
+      "y": -218.60000610351562,
+      "z": 0.7473437786102295
+    },
+    "rotation": {
+      "yaw": -91.76483154296875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "right",
+    "parking_line_index": 1
+  },
+  {
+    "location": {
+      "x": 386.20001220703125,
+      "y": -199.5,
+      "z": 0.7564062476158142
+    },
+    "rotation": {
+      "yaw": 271.962646484375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.ambulance",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 379.5726013183594,
+      "y": -205.5,
+      "z": 0.6450000405311584
+    },
+    "rotation": {
+      "yaw": 91.25833892822266,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 373.8503112792969,
+      "y": -205.5,
+      "z": 0.5314062833786011
+    },
+    "rotation": {
+      "yaw": 91.033447265625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 366.7960510253906,
+      "y": -199.5,
+      "z": 0.49851560592651367
+    },
+    "rotation": {
+      "yaw": 271.45855712890625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 360.1361083984375,
+      "y": -199.5,
+      "z": 0.46156251430511475
+    },
+    "rotation": {
+      "yaw": 271.82342529296875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 355.5627136230469,
+      "y": -205.5,
+      "z": 0.3434375524520874
+    },
+    "rotation": {
+      "yaw": 91.87806701660156,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_2020",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 349.1135559082031,
+      "y": -199.5,
+      "z": 0.4832812547683716
+    },
+    "rotation": {
+      "yaw": 271.50494384765625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 341.5126647949219,
+      "y": -199.5,
+      "z": 0.5388281345367432
+    },
+    "rotation": {
+      "yaw": 270.822509765625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 336.3026428222656,
+      "y": -205.5,
+      "z": 0.48359382152557373
+    },
+    "rotation": {
+      "yaw": 91.54573059082031,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 331.2058410644531,
+      "y": -205.5,
+      "z": 0.5554687976837158
+    },
+    "rotation": {
+      "yaw": 91.73725128173828,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 325.2310791015625,
+      "y": -199.5,
+      "z": 0.7601562738418579
+    },
+    "rotation": {
+      "yaw": 269.980224609375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 320.8382873535156,
+      "y": -205.5,
+      "z": 0.7476562857627869
+    },
+    "rotation": {
+      "yaw": 91.35106658935547,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.carlamotors.carlacola",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 316.51336669921875,
+      "y": -199.5,
+      "z": 0.9173437356948853
+    },
+    "rotation": {
+      "yaw": 268.564697265625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police_2020",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 311.8573913574219,
+      "y": -205.5,
+      "z": 0.9520312547683716
+    },
+    "rotation": {
+      "yaw": 90.24519348144531,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 305.89459228515625,
+      "y": -205.5,
+      "z": 1.0993750095367432
+    },
+    "rotation": {
+      "yaw": 88.40208435058594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 298.01922607421875,
+      "y": -199.5,
+      "z": 1.267578125
+    },
+    "rotation": {
+      "yaw": 269.4635925292969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "left",
+    "parking_line_index": 2
+  },
+  {
+    "location": {
+      "x": 386.20001220703125,
+      "y": -187.0,
+      "z": 1.159765601158142
+    },
+    "rotation": {
+      "yaw": 90.40149688720703,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 381.421630859375,
+      "y": -187.0,
+      "z": 1.1340625286102295
+    },
+    "rotation": {
+      "yaw": 89.341064453125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 373.9875183105469,
+      "y": -181.0,
+      "z": 1.4872655868530273
+    },
+    "rotation": {
+      "yaw": 268.4022216796875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 367.5008850097656,
+      "y": -181.0,
+      "z": 1.4782812595367432
+    },
+    "rotation": {
+      "yaw": 270.328857421875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 360.7408752441406,
+      "y": -187.0,
+      "z": 1.0563281774520874
+    },
+    "rotation": {
+      "yaw": 91.2567367553711,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 352.7463073730469,
+      "y": -187.0,
+      "z": 1.0620312690734863
+    },
+    "rotation": {
+      "yaw": 90.20332336425781,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 348.0909118652344,
+      "y": -187.0,
+      "z": 1.0715625286102295
+    },
+    "rotation": {
+      "yaw": 88.7313003540039,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.micro.microlino",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 341.2966613769531,
+      "y": -181.0,
+      "z": 1.4453125
+    },
+    "rotation": {
+      "yaw": 268.0326843261719,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 334.8148498535156,
+      "y": -181.0,
+      "z": 1.3897656202316284
+    },
+    "rotation": {
+      "yaw": 270.64935302734375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.carlamotors.carlacola",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 326.8949890136719,
+      "y": -181.0,
+      "z": 1.3372656106948853
+    },
+    "rotation": {
+      "yaw": 270.2007751464844,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.mustang",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 321.2444152832031,
+      "y": -187.0,
+      "z": 1.1403125524520874
+    },
+    "rotation": {
+      "yaw": 90.69889068603516,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 315.835693359375,
+      "y": -187.0,
+      "z": 1.146640658378601
+    },
+    "rotation": {
+      "yaw": 88.51428985595703,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 308.4447937011719,
+      "y": -181.0,
+      "z": 1.155859351158142
+    },
+    "rotation": {
+      "yaw": 271.8829650878906,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 301.4778137207031,
+      "y": -187.0,
+      "z": 1.1396093368530273
+    },
+    "rotation": {
+      "yaw": 88.11163330078125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 296.0885009765625,
+      "y": -187.0,
+      "z": 1.1282031536102295
+    },
+    "rotation": {
+      "yaw": 91.03985595703125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.jeep.wrangler_rubicon",
+    "side": "right",
+    "parking_line_index": 3
+  },
+  {
+    "location": {
+      "x": 382.20001220703125,
+      "y": -162.39999389648438,
+      "z": 2.5268750190734863
+    },
+    "rotation": {
+      "yaw": 268.8804016113281,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 375.2488708496094,
+      "y": -168.39999389648438,
+      "z": 2.272265672683716
+    },
+    "rotation": {
+      "yaw": 90.5124740600586,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 369.6650085449219,
+      "y": -168.39999389648438,
+      "z": 2.2632813453674316
+    },
+    "rotation": {
+      "yaw": 91.6660385131836,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2020",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 364.82403564453125,
+      "y": -168.39999389648438,
+      "z": 2.2412500381469727
+    },
+    "rotation": {
+      "yaw": 91.68834686279297,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.bmw.grandtourer",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 358.5585632324219,
+      "y": -162.39999389648438,
+      "z": 2.3946094512939453
+    },
+    "rotation": {
+      "yaw": 271.3258972167969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 351.14410400390625,
+      "y": -162.39999389648438,
+      "z": 2.2734375
+    },
+    "rotation": {
+      "yaw": 268.83203125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 343.3556213378906,
+      "y": -162.39999389648438,
+      "z": 2.110468864440918
+    },
+    "rotation": {
+      "yaw": 270.14501953125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 336.0014953613281,
+      "y": -168.39999389648438,
+      "z": 1.836484432220459
+    },
+    "rotation": {
+      "yaw": 90.41722106933594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.a2",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 330.87664794921875,
+      "y": -168.39999389648438,
+      "z": 1.7206250429153442
+    },
+    "rotation": {
+      "yaw": 91.71663665771484,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 326.3349609375,
+      "y": -168.39999389648438,
+      "z": 1.610937476158142
+    },
+    "rotation": {
+      "yaw": 89.71761322021484,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 319.3132629394531,
+      "y": -162.39999389648438,
+      "z": 1.4651561975479126
+    },
+    "rotation": {
+      "yaw": 271.5909729003906,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 315.1753845214844,
+      "y": -162.39999389648438,
+      "z": 1.3467968702316284
+    },
+    "rotation": {
+      "yaw": 270.78594970703125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.micro.microlino",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 309.64898681640625,
+      "y": -168.39999389648438,
+      "z": 1.1749999523162842
+    },
+    "rotation": {
+      "yaw": 89.98635864257812,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 302.85980224609375,
+      "y": -168.39999389648438,
+      "z": 0.9983593821525574
+    },
+    "rotation": {
+      "yaw": 90.02670288085938,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.tesla.model3",
+    "side": "right",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 295.5173645019531,
+      "y": -162.39999389648438,
+      "z": 0.84375
+    },
+    "rotation": {
+      "yaw": 270.2782897949219,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "left",
+    "parking_line_index": 4
+  },
+  {
+    "location": {
+      "x": 383.70001220703125,
+      "y": -149.60000610351562,
+      "z": 2.6084375381469727
+    },
+    "rotation": {
+      "yaw": 89.04151916503906,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 5
+  },
+  {
+    "location": {
+      "x": 369.7177429199219,
+      "y": -149.60000610351562,
+      "z": 2.508359432220459
+    },
+    "rotation": {
+      "yaw": 89.78831481933594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "right",
+    "parking_line_index": 5
+  },
+  {
+    "location": {
+      "x": 352.3526306152344,
+      "y": -149.60000610351562,
+      "z": 2.2685155868530273
+    },
+    "rotation": {
+      "yaw": 90.74844360351562,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "right",
+    "parking_line_index": 5
+  },
+  {
+    "location": {
+      "x": 334.5538635253906,
+      "y": -149.60000610351562,
+      "z": 1.909765601158142
+    },
+    "rotation": {
+      "yaw": 89.18824005126953,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "right",
+    "parking_line_index": 5
+  },
+  {
+    "location": {
+      "x": 322.8575134277344,
+      "y": -149.60000610351562,
+      "z": 1.663671851158142
+    },
+    "rotation": {
+      "yaw": 90.76142883300781,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "right",
+    "parking_line_index": 5
+  },
+  {
+    "location": {
+      "x": 383.70001220703125,
+      "y": -139.60000610351562,
+      "z": 2.197890520095825
+    },
+    "rotation": {
+      "yaw": 268.7091979980469,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 374.3746032714844,
+      "y": -139.60000610351562,
+      "z": 2.135312557220459
+    },
+    "rotation": {
+      "yaw": 269.77264404296875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 359.0420227050781,
+      "y": -139.60000610351562,
+      "z": 2.040156364440918
+    },
+    "rotation": {
+      "yaw": 270.6471862792969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 350.9829406738281,
+      "y": -139.60000610351562,
+      "z": 1.9796093702316284
+    },
+    "rotation": {
+      "yaw": 270.47412109375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 341.73504638671875,
+      "y": -139.60000610351562,
+      "z": 1.9125781059265137
+    },
+    "rotation": {
+      "yaw": 269.07598876953125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.jeep.wrangler_rubicon",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 332.5078430175781,
+      "y": -139.60000610351562,
+      "z": 1.8528906106948853
+    },
+    "rotation": {
+      "yaw": 268.5628662109375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.a2",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 320.5287170410156,
+      "y": -139.60000610351562,
+      "z": 1.7979687452316284
+    },
+    "rotation": {
+      "yaw": 271.062255859375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.crown",
+    "side": "left",
+    "parking_line_index": 6
+  },
+  {
+    "location": {
+      "x": 370.70001220703125,
+      "y": -126.5,
+      "z": 1.5771875381469727
+    },
+    "rotation": {
+      "yaw": 89.18036651611328,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 362.2153625488281,
+      "y": -126.5,
+      "z": 1.6591405868530273
+    },
+    "rotation": {
+      "yaw": 91.5986557006836,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 353.7286682128906,
+      "y": -126.5,
+      "z": 1.696718692779541
+    },
+    "rotation": {
+      "yaw": 89.90916442871094,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 346.27947998046875,
+      "y": -126.5,
+      "z": 1.712499976158142
+    },
+    "rotation": {
+      "yaw": 88.21736907958984,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 336.3735656738281,
+      "y": -126.5,
+      "z": 1.7335937023162842
+    },
+    "rotation": {
+      "yaw": 91.02484893798828,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 327.17047119140625,
+      "y": -126.5,
+      "z": 1.7531249523162842
+    },
+    "rotation": {
+      "yaw": 91.11941528320312,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 319.17730712890625,
+      "y": -126.5,
+      "z": 1.770078182220459
+    },
+    "rotation": {
+      "yaw": 91.92253112792969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 312.9619140625,
+      "y": -126.5,
+      "z": 1.783359408378601
+    },
+    "rotation": {
+      "yaw": 91.1433334350586,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "right",
+    "parking_line_index": 7
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -133.39999389648438,
+      "z": 1.9992969036102295
+    },
+    "rotation": {
+      "yaw": 0.25228992104530334,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -137.57339477539062,
+      "z": 2.1875782012939453
+    },
+    "rotation": {
+      "yaw": 0.17788773775100708,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police_2020",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -144.02499389648438,
+      "z": 2.2671875953674316
+    },
+    "rotation": {
+      "yaw": 0.4658953845500946,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.a2",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -149.38180541992188,
+      "z": 2.125781297683716
+    },
+    "rotation": {
+      "yaw": 1.833366870880127,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -154.98388671875,
+      "z": 1.8860156536102295
+    },
+    "rotation": {
+      "yaw": -1.972318410873413,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.a2",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -161.73867797851562,
+      "z": 1.6532031297683716
+    },
+    "rotation": {
+      "yaw": 1.8919504880905151,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.crown",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -169.23345947265625,
+      "z": 1.62109375
+    },
+    "rotation": {
+      "yaw": -0.028637029230594635,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -173.89004516601562,
+      "z": 1.6012500524520874
+    },
+    "rotation": {
+      "yaw": 0.5067247748374939,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -178.45169067382812,
+      "z": 1.581640601158142
+    },
+    "rotation": {
+      "yaw": 0.16765251755714417,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -183.50827026367188,
+      "z": 1.5600781440734863
+    },
+    "rotation": {
+      "yaw": -0.49712806940078735,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.carlamotors.carlacola",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -188.8157196044922,
+      "z": 1.537265658378601
+    },
+    "rotation": {
+      "yaw": -0.0452997162938118,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.ambulance",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -194.85516357421875,
+      "z": 1.5114063024520874
+    },
+    "rotation": {
+      "yaw": 1.5340259075164795,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -200.28646850585938,
+      "z": 1.4882031679153442
+    },
+    "rotation": {
+      "yaw": -0.994108259677887,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_2020",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -207.9323272705078,
+      "z": 1.4229687452316284
+    },
+    "rotation": {
+      "yaw": -1.2791403532028198,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -213.61102294921875,
+      "z": 1.2385938167572021
+    },
+    "rotation": {
+      "yaw": -1.5350329875946045,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -219.8482208251953,
+      "z": 1.1617968082427979
+    },
+    "rotation": {
+      "yaw": 0.4403132498264313,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 399.8999938964844,
+      "y": -226.29721069335938,
+      "z": 1.2174999713897705
+    },
+    "rotation": {
+      "yaw": -1.6239264011383057,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.bmw.grandtourer",
+    "side": "left",
+    "parking_line_index": 8
+  },
+  {
+    "location": {
+      "x": 326.29998779296875,
+      "y": -106.0999984741211,
+      "z": 2.031562566757202
+    },
+    "rotation": {
+      "yaw": 271.59674072265625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 320.5684509277344,
+      "y": -106.0999984741211,
+      "z": 2.1430468559265137
+    },
+    "rotation": {
+      "yaw": 271.02301025390625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 314.3683166503906,
+      "y": -106.0999984741211,
+      "z": 2.2415623664855957
+    },
+    "rotation": {
+      "yaw": 269.23291015625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 310.207275390625,
+      "y": -106.0999984741211,
+      "z": 2.294687509536743
+    },
+    "rotation": {
+      "yaw": 268.32672119140625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 304.4813232421875,
+      "y": -106.0999984741211,
+      "z": 2.3485937118530273
+    },
+    "rotation": {
+      "yaw": 271.7192077636719,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 297.58282470703125,
+      "y": -112.0999984741211,
+      "z": 2.575390577316284
+    },
+    "rotation": {
+      "yaw": 90.24234771728516,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 286.288818359375,
+      "y": -106.0999984741211,
+      "z": 2.3778905868530273
+    },
+    "rotation": {
+      "yaw": 269.0296630859375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "left",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 281.61248779296875,
+      "y": -112.0999984741211,
+      "z": 2.5646095275878906
+    },
+    "rotation": {
+      "yaw": 90.7699966430664,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 9
+  },
+  {
+    "location": {
+      "x": 329.8999938964844,
+      "y": -88.9000015258789,
+      "z": 1.2878906726837158
+    },
+    "rotation": {
+      "yaw": 270.2986145019531,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 324.75543212890625,
+      "y": -88.9000015258789,
+      "z": 1.2946875095367432
+    },
+    "rotation": {
+      "yaw": 271.7011413574219,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 317.8002014160156,
+      "y": -94.9000015258789,
+      "z": 1.6782031059265137
+    },
+    "rotation": {
+      "yaw": 88.84237670898438,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "right",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 309.9732971191406,
+      "y": -88.9000015258789,
+      "z": 1.30078125
+    },
+    "rotation": {
+      "yaw": 270.5706787109375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 303.7713623046875,
+      "y": -88.9000015258789,
+      "z": 1.3047655820846558
+    },
+    "rotation": {
+      "yaw": 270.1182556152344,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 296.1690673828125,
+      "y": -88.9000015258789,
+      "z": 1.3163281679153442
+    },
+    "rotation": {
+      "yaw": 270.70867919921875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 288.2697448730469,
+      "y": -88.9000015258789,
+      "z": 1.3407031297683716
+    },
+    "rotation": {
+      "yaw": 269.76910400390625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "left",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 281.4007263183594,
+      "y": -94.9000015258789,
+      "z": 1.7374999523162842
+    },
+    "rotation": {
+      "yaw": 89.14584350585938,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.chevrolet.impala",
+    "side": "right",
+    "parking_line_index": 10
+  },
+  {
+    "location": {
+      "x": 326.1000061035156,
+      "y": -70.19999694824219,
+      "z": 0.4515625238418579
+    },
+    "rotation": {
+      "yaw": 269.5243225097656,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 318.4314270019531,
+      "y": -76.19999694824219,
+      "z": 0.6078125238418579
+    },
+    "rotation": {
+      "yaw": 90.9670639038086,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police_2020",
+    "side": "right",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 310.7398681640625,
+      "y": -70.19999694824219,
+      "z": 0.4019531011581421
+    },
+    "rotation": {
+      "yaw": 269.4063720703125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "left",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 305.38409423828125,
+      "y": -76.19999694824219,
+      "z": 0.6020312905311584
+    },
+    "rotation": {
+      "yaw": 88.84618377685547,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "right",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 292.3497619628906,
+      "y": -70.19999694824219,
+      "z": 0.5701562762260437
+    },
+    "rotation": {
+      "yaw": 269.3471374511719,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "left",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 285.998779296875,
+      "y": -70.19999694824219,
+      "z": 0.681640625
+    },
+    "rotation": {
+      "yaw": 271.1802062988281,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "left",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 281.5179138183594,
+      "y": -76.19999694824219,
+      "z": 0.8672656416893005
+    },
+    "rotation": {
+      "yaw": 89.26519012451172,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.crown",
+    "side": "right",
+    "parking_line_index": 11
+  },
+  {
+    "location": {
+      "x": 326.1000061035156,
+      "y": -56.400001525878906,
+      "z": 0.5342968702316284
+    },
+    "rotation": {
+      "yaw": 89.54886627197266,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 320.150390625,
+      "y": -56.400001525878906,
+      "z": 0.5207812786102295
+    },
+    "rotation": {
+      "yaw": 88.50565338134766,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "right",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 313.4280700683594,
+      "y": -50.400001525878906,
+      "z": 0.8049218654632568
+    },
+    "rotation": {
+      "yaw": 271.03057861328125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.tesla.model3",
+    "side": "left",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 302.99761962890625,
+      "y": -56.400001525878906,
+      "z": 0.6060156226158142
+    },
+    "rotation": {
+      "yaw": 90.7903823852539,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.micro.microlino",
+    "side": "right",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 297.3736877441406,
+      "y": -50.400001525878906,
+      "z": 0.9058594107627869
+    },
+    "rotation": {
+      "yaw": 269.5716857910156,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2020",
+    "side": "left",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 291.94866943359375,
+      "y": -56.400001525878906,
+      "z": 0.7385937571525574
+    },
+    "rotation": {
+      "yaw": 90.014404296875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2020",
+    "side": "right",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 287.0112609863281,
+      "y": -56.400001525878906,
+      "z": 0.8104687929153442
+    },
+    "rotation": {
+      "yaw": 90.94869995117188,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "right",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 280.7094421386719,
+      "y": -50.400001525878906,
+      "z": 1.0442968606948853
+    },
+    "rotation": {
+      "yaw": 271.50518798828125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "left",
+    "parking_line_index": 12
+  },
+  {
+    "location": {
+      "x": 318.2564697265625,
+      "y": -36.20000076293945,
+      "z": 1.6747655868530273
+    },
+    "rotation": {
+      "yaw": 88.81188201904297,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2020",
+    "side": "right",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 314.157470703125,
+      "y": -30.200000762939453,
+      "z": 1.982578158378601
+    },
+    "rotation": {
+      "yaw": 269.53326416015625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "left",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 306.6541442871094,
+      "y": -36.20000076293945,
+      "z": 1.6003124713897705
+    },
+    "rotation": {
+      "yaw": 91.88450622558594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "right",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 301.4130859375,
+      "y": -36.20000076293945,
+      "z": 1.552734375
+    },
+    "rotation": {
+      "yaw": 91.52433013916016,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police",
+    "side": "right",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 295.5924987792969,
+      "y": -36.20000076293945,
+      "z": 1.4918750524520874
+    },
+    "rotation": {
+      "yaw": 88.2746353149414,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "right",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 288.75421142578125,
+      "y": -30.200000762939453,
+      "z": 1.5409375429153442
+    },
+    "rotation": {
+      "yaw": 268.68450927734375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "left",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 281.3740234375,
+      "y": -36.20000076293945,
+      "z": 1.3037500381469727
+    },
+    "rotation": {
+      "yaw": 88.75299835205078,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "right",
+    "parking_line_index": 13
+  },
+  {
+    "location": {
+      "x": 100.9000015258789,
+      "y": -241.5,
+      "z": 0.466796875
+    },
+    "rotation": {
+      "yaw": 91.95316314697266,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "right",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 95.8152084350586,
+      "y": -241.5,
+      "z": 0.5085156559944153
+    },
+    "rotation": {
+      "yaw": 91.47480010986328,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "right",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 88.5927734375,
+      "y": -235.5,
+      "z": 0.5242968797683716
+    },
+    "rotation": {
+      "yaw": 268.0728454589844,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.micra",
+    "side": "left",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 81.41593170166016,
+      "y": -241.5,
+      "z": 0.684765636920929
+    },
+    "rotation": {
+      "yaw": 89.85247802734375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.bmw.grandtourer",
+    "side": "right",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 76.84217071533203,
+      "y": -235.5,
+      "z": 0.7392969131469727
+    },
+    "rotation": {
+      "yaw": 269.16558837890625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "left",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 69.06804656982422,
+      "y": -235.5,
+      "z": 0.916796863079071
+    },
+    "rotation": {
+      "yaw": 268.5435485839844,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 61.383480072021484,
+      "y": -241.5,
+      "z": 1.1284375190734863
+    },
+    "rotation": {
+      "yaw": 88.21192169189453,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "right",
+    "parking_line_index": 14
+  },
+  {
+    "location": {
+      "x": 100.9000015258789,
+      "y": -222.6999969482422,
+      "z": 0.6612499952316284
+    },
+    "rotation": {
+      "yaw": 90.51887512207031,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.jeep.wrangler_rubicon",
+    "side": "right",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 92.94482421875,
+      "y": -216.6999969482422,
+      "z": 1.0166406631469727
+    },
+    "rotation": {
+      "yaw": 271.945068359375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe",
+    "side": "left",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 87.42536163330078,
+      "y": -216.6999969482422,
+      "z": 1.0421093702316284
+    },
+    "rotation": {
+      "yaw": 271.4171447753906,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 82.20878601074219,
+      "y": -216.6999969482422,
+      "z": 1.0668749809265137
+    },
+    "rotation": {
+      "yaw": 271.8343200683594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.sprinter",
+    "side": "left",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 75.30024719238281,
+      "y": -222.6999969482422,
+      "z": 0.9466406106948853
+    },
+    "rotation": {
+      "yaw": 88.01203155517578,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_2020",
+    "side": "right",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 70.29158782958984,
+      "y": -216.6999969482422,
+      "z": 1.1132031679153442
+    },
+    "rotation": {
+      "yaw": 269.6823425292969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "left",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 64.08944702148438,
+      "y": -216.6999969482422,
+      "z": 1.1278125047683716
+    },
+    "rotation": {
+      "yaw": 271.4289245605469,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "left",
+    "parking_line_index": 15
+  },
+  {
+    "location": {
+      "x": 100.9000015258789,
+      "y": -204.3000030517578,
+      "z": 1.672421932220459
+    },
+    "rotation": {
+      "yaw": 89.47640228271484,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.mustang",
+    "side": "right",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 96.48638153076172,
+      "y": -198.3000030517578,
+      "z": 1.84765625
+    },
+    "rotation": {
+      "yaw": 271.1091613769531,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 91.1745376586914,
+      "y": -198.3000030517578,
+      "z": 1.7478125095367432
+    },
+    "rotation": {
+      "yaw": 269.8935852050781,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 85.5141830444336,
+      "y": -198.3000030517578,
+      "z": 1.6279687881469727
+    },
+    "rotation": {
+      "yaw": 271.1936950683594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.toyota.prius",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 78.64727783203125,
+      "y": -204.3000030517578,
+      "z": 1.385312557220459
+    },
+    "rotation": {
+      "yaw": 88.88970947265625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 70.71294403076172,
+      "y": -198.3000030517578,
+      "z": 1.2763280868530273
+    },
+    "rotation": {
+      "yaw": 271.2430419921875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 66.35368347167969,
+      "y": -198.3000030517578,
+      "z": 1.1677343845367432
+    },
+    "rotation": {
+      "yaw": 268.8538513183594,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 61.02878189086914,
+      "y": -198.3000030517578,
+      "z": 1.0344531536102295
+    },
+    "rotation": {
+      "yaw": 271.8067626953125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.mustang",
+    "side": "left",
+    "parking_line_index": 16
+  },
+  {
+    "location": {
+      "x": 129.58892822265625,
+      "y": -77.0000228881836,
+      "z": 1.492578148841858
+    },
+    "rotation": {
+      "yaw": -90.08039855957031,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "left",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 125.41559600830078,
+      "y": -83.0154800415039,
+      "z": 1.3209375143051147
+    },
+    "rotation": {
+      "yaw": -269.7782897949219,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 117.51129150390625,
+      "y": -77.04464721679688,
+      "z": 1.2440625429153442
+    },
+    "rotation": {
+      "yaw": -90.89109802246094,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.crown",
+    "side": "left",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 110.69559478759766,
+      "y": -83.06986236572266,
+      "z": 0.9654687643051147
+    },
+    "rotation": {
+      "yaw": -270.76654052734375,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.tt",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 106.36236572265625,
+      "y": -83.08586883544922,
+      "z": 0.8780468702316284
+    },
+    "rotation": {
+      "yaw": -271.0408630371094,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mercedes.coupe_2020",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 102.24076843261719,
+      "y": -83.1010971069336,
+      "z": 0.8052343726158142
+    },
+    "rotation": {
+      "yaw": -270.42449951171875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 94.4142837524414,
+      "y": -83.13001251220703,
+      "z": 0.6877343654632568
+    },
+    "rotation": {
+      "yaw": -268.171875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.ford.mustang",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 88.556640625,
+      "y": -83.15165710449219,
+      "z": 0.6267969012260437
+    },
+    "rotation": {
+      "yaw": -270.5545654296875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.audi.etron",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 83.7457046508789,
+      "y": -83.16943359375,
+      "z": 0.6098437905311584
+    },
+    "rotation": {
+      "yaw": -271.1746520996094,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 77.23868560791016,
+      "y": -83.19347381591797,
+      "z": 0.5969531536102295
+    },
+    "rotation": {
+      "yaw": -270.6297607421875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s_2021",
+    "side": "right",
+    "parking_line_index": 17
+  },
+  {
+    "location": {
+      "x": 129.60000610351562,
+      "y": -59.0,
+      "z": 1.9443750381469727
+    },
+    "rotation": {
+      "yaw": 269.1288757324219,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "left",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 124.6998519897461,
+      "y": -59.0,
+      "z": 1.9754687547683716
+    },
+    "rotation": {
+      "yaw": 271.7341003417969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "left",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 119.62590789794922,
+      "y": -65.0,
+      "z": 1.728671908378601
+    },
+    "rotation": {
+      "yaw": 91.7588119506836,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 114.02379608154297,
+      "y": -59.0,
+      "z": 2.039843797683716
+    },
+    "rotation": {
+      "yaw": 271.8053894042969,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "left",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 107.77732849121094,
+      "y": -65.0,
+      "z": 1.7137500047683716
+    },
+    "rotation": {
+      "yaw": 90.30292510986328,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.jeep.wrangler_rubicon",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 100.18951416015625,
+      "y": -59.0,
+      "z": 2.0996875762939453
+    },
+    "rotation": {
+      "yaw": 268.4649963378906,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.citroen.c3",
+    "side": "left",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 95.28617858886719,
+      "y": -65.0,
+      "z": 1.708984375
+    },
+    "rotation": {
+      "yaw": 90.82997131347656,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.mini.cooper_s",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 88.98233032226562,
+      "y": -65.0,
+      "z": 1.704531192779541
+    },
+    "rotation": {
+      "yaw": 88.04278564453125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 83.59220123291016,
+      "y": -65.0,
+      "z": 1.6971875429153442
+    },
+    "rotation": {
+      "yaw": 88.75990295410156,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.dodge.charger_police_2020",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 76.18865966796875,
+      "y": -65.0,
+      "z": 1.6783593893051147
+    },
+    "rotation": {
+      "yaw": 90.67642974853516,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol_2021",
+    "side": "right",
+    "parking_line_index": 18
+  },
+  {
+    "location": {
+      "x": 129.60000610351562,
+      "y": -47.79999923706055,
+      "z": 2.2518749237060547
+    },
+    "rotation": {
+      "yaw": 90.945556640625,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "right",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 124.69208526611328,
+      "y": -47.79999923706055,
+      "z": 2.3385937213897705
+    },
+    "rotation": {
+      "yaw": 90.28384399414062,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.seat.leon",
+    "side": "right",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 117.9864273071289,
+      "y": -41.79999923706055,
+      "z": 2.5219531059265137
+    },
+    "rotation": {
+      "yaw": 268.5074768066406,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.nissan.patrol",
+    "side": "left",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 111.59344482421875,
+      "y": -41.79999923706055,
+      "z": 2.5904688835144043
+    },
+    "rotation": {
+      "yaw": 269.55517578125,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.tesla.model3",
+    "side": "left",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 103.7123794555664,
+      "y": -41.79999923706055,
+      "z": 2.6329689025878906
+    },
+    "rotation": {
+      "yaw": 271.5105895996094,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.tesla.model3",
+    "side": "left",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 97.46253204345703,
+      "y": -41.79999923706055,
+      "z": 2.6321873664855957
+    },
+    "rotation": {
+      "yaw": 270.64324951171875,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.micro.microlino",
+    "side": "left",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 88.44489288330078,
+      "y": -47.79999923706055,
+      "z": 2.5542969703674316
+    },
+    "rotation": {
+      "yaw": 91.2163314819336,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "right",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 83.38752746582031,
+      "y": -47.79999923706055,
+      "z": 2.5102343559265137
+    },
+    "rotation": {
+      "yaw": 90.45982360839844,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.lincoln.mkz_2017",
+    "side": "right",
+    "parking_line_index": 19
+  },
+  {
+    "location": {
+      "x": 78.47836303710938,
+      "y": -41.79999923706055,
+      "z": 2.452265739440918
+    },
+    "rotation": {
+      "yaw": 270.4205017089844,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "vehicle_type": "vehicle.volkswagen.t2_2021",
+    "side": "left",
+    "parking_line_index": 19
+  }
+]
