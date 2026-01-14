@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoadRunnerMetadata Version="6">
+    <SignalConfigurations/>
+    <Signalization/>
+    <MaterialList>
+        <Material>
+            <Name>Grass1</Name>
+            <DiffuseMap>Grass1_Diff.png</DiffuseMap>
+            <NormalMap>Grass1_Norm.png</NormalMap>
+            <SpecularMap>Grass1_AORM.png</SpecularMap>
+            <AmbientColor>0.200000,0.200000,0.200000</AmbientColor>
+            <DiffuseColor>0.211765,1.000000,0.125490</DiffuseColor>
+            <SpecularColor>0.039216,0.039216,0.039216</SpecularColor>
+            <Roughness>0.998000</Roughness>
+            <SpecularFactor>1.000000</SpecularFactor>
+            <TransparencyFactor>0.000000</TransparencyFactor>
+            <Emission>0.000000</Emission>
+            <EmissionColor>0.309804,1.000000,0.101961</EmissionColor>
+            <TextureScaleU>0.497512</TextureScaleU>
+            <TextureScaleV>0.497512</TextureScaleV>
+            <TwoSided>false</TwoSided>
+            <DrawQueue>0</DrawQueue>
+            <ShadowCaster>true</ShadowCaster>
+            <IsDecal>false</IsDecal>
+            <SegmentationType>Ground</SegmentationType>
+        </Material>
+    </MaterialList>
+</RoadRunnerMetadata>
